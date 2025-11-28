@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prédiction Churn</title>
+</head>
+<body>
+    <h1>Prédiction du churn client</h1>
+    <form method="POST">
+        <label for="State">State:</label>
+        <input type="text" id="State" name="State"><br><br>
+        <label for="Account_length">Account Length:</label>
+        <input type="text" id="Account_length" name="Account_length"><br><br>
+        <label for="International_plan">International Plan:</label>
+        <input type="text" id="International_plan" name="International_plan"><br><br>
+        <label for="Number_vmail_messages">Number of Vmail Messages:</label>
+        <input type="text" id="Number_vmail_messages" name="Number_vmail_messages"><br><br>
+        <label for="Total_day_charge">Total Day Charge:</label>
+        <input type="text" id="Total_day_charge" name="Total_day_charge"><br><br>
+        <label for="Total_eve_charge">Total Eve Charge:</label>
+        <input type="text" id="Total_eve_charge" name="Total_eve_charge"><br><br>
+        <label for="Total_night_charge">Total Night Charge:</label>
+        <input type="text" id="Total_night_charge" name="Total_night_charge"><br><br>
+        <label for="Total_intl_charge">Total Intl Charge:</label>
+        <input type="text" id="Total_intl_charge" name="Total_intl_charge"><br><br>
+        <label for="Customer_service_calls">Customer Service Calls:</label>
+        <input type="text" id="Customer_service_calls" name="Customer_service_calls"><br><br>
+        <label for="Day_minutes_per_call">Day Minutes per Call:</label>
+        <input type="text" id="Day_minutes_per_call" name="Day_minutes_per_call"><br><br>
+        <label for="Eve_minutes_per_call">Eve Minutes per Call:</label>
+        <input type="text" id="Eve_minutes_per_call" name="Eve_minutes_per_call"><br><br>
+        <label for="Night_minutes_per_call">Night Minutes per Call:</label>
+        <input type="text" id="Night_minutes_per_call" name="Night_minutes_per_call"><br><br>
+        <label for="Intl_minutes_per_call">Intl Minutes per Call:</label>
+        <input type="text" id="Intl_minutes_per_call" name="Intl_minutes_per_call"><br><br>
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Prédiction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>

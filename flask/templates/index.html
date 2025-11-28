@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction</title>
+</head>
+<body>
+    <h1>Prédiction de désabonnement</h1>
+    <form method="POST">
+        <label for="State">State:</label>
+        <input type="text" name="State" required><br><br>
+        
+        <label for="Account_length">Account Length:</label>
+        <input type="text" name="Account_length" required><br><br>
+        
+        <label for="International_plan">International Plan:</label>
+        <input type="text" name="International_plan" required><br><br>
+        
+        <label for="Number_vmail_messages">Number of Voicemail Messages:</label>
+        <input type="text" name="Number_vmail_messages" required><br><br>
+        
+        <label for="Total_day_charge">Total Day Charge:</label>
+        <input type="text" name="Total_day_charge" required><br><br>
+        
+        <label for="Total_eve_charge">Total Evening Charge:</label>
+        <input type="text" name="Total_eve_charge" required><br><br>
+        
+        <label for="Total_night_charge">Total Night Charge:</label>
+        <input type="text" name="Total_night_charge" required><br><br>
+        
+        <label for="Total_intl_charge">Total International Charge:</label>
+        <input type="text" name="Total_intl_charge" required><br><br>
+        
+        <label for="Customer_service_calls">Customer Service Calls:</label>
+        <input type="text" name="Customer_service_calls" required><br><br>
+        
+        <label for="Day_minutes_per_call">Day Minutes Per Call:</label>
+        <input type="text" name="Day_minutes_per_call" required><br><br>
+        
+        <label for="Eve_minutes_per_call">Evening Minutes Per Call:</label>
+        <input type="text" name="Eve_minutes_per_call" required><br><br>
+        
+        <label for="Night_minutes_per_call">Night Minutes Per Call:</label>
+        <input type="text" name="Night_minutes_per_call" required><br><br>
+        
+        <label for="Intl_minutes_per_call">International Minutes Per Call:</label>
+        <input type="text" name="Intl_minutes_per_call" required><br><br>
+
+        <button type="submit">Soumettre</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Résultat de la prédiction : {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
